@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import CharacterCard from './CharacterCard';
+import EpisodeCard from './EpisodeCard';
 
-export default function CharacterList() {
+export default function EpisodeList() {
   // TODO: Add useState to track data from useEffect
-const [characters, setCharecters] = useState([]);
+const [episodes, setEpisodes] = useState([]);
   useEffect(() => {
-    Axios.get('https://rick-api.herokuapp.com/api/character/')
+    Axios.get('https://rick-api.herokuapp.com/api/episode/')
     .then((data)=>
-    setCharecters(data.data.results)
+    setEpisodes(data.data.results)
     )
     // TODO: Add AJAX/API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
-  console.log(characters, 'chars')
+  console.log(episodes, 'eps')
 
   return (
     <section className="character-list grid-view">
-      {characters.map(char =>{
-        return <CharacterCard name={char.name} status={char.status} species={char.species} type={char.type} img={char.image}/>
+      {episodes.map(eps =>{
+        return <EpisodeCard name={eps.name} air={eps.air_date} episode={eps.episode}/>
       }
         )}
     </section>
