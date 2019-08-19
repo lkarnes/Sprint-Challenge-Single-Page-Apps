@@ -15,12 +15,10 @@ text-align: center
 export default function TabNav() {
 return (
     <Menu>
+        <Tabs><NavLink to='/'>Home</NavLink></Tabs>
         <Tabs><NavLink to='/characters/' >Charecters</NavLink></Tabs>
         <Tabs><NavLink to='/locations/'>Locations</NavLink></Tabs>
         <Tabs><NavLink to='/episodes/'>Episodes</NavLink></Tabs>
-        <Tabs><NavLink to='/'>Home</NavLink></Tabs>
-        
-        
     </Menu>
 )
 };
