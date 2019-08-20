@@ -18,7 +18,7 @@ const [episodes, setEpisodes] = useState([]);
   return (
     <section className="character-list grid-view">
       {episodes.map(eps =>{
-        return <EpisodeCard name={eps.name} air={eps.air_date} episode={eps.episode}/>
+        return <EpisodeCard name={eps.name} air={eps.air_date} episode={eps.episode} char={eps.characters}/>
       }
         )}
     </section>

@@ -11,7 +11,7 @@ export default function CharacterCard({name,status,species,type,img}) {
   return (
     <Character>
       <img src={img}/>
-      <p>{name}</p>
+      <h2>{name}</h2>
       <p>{status}</p>
       <p>{species}</p>
       <p>{type}</p>

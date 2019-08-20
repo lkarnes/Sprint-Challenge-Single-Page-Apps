@@ -6,6 +6,7 @@ import WelcomePage from './components/WelcomePage.js';
 import LocationList from './components/LocationsList';
 import CharacterList from './components/CharacterList';
 import EpisodeList from './components/EpisodeList';
+
 // import AppRouter from "./components/AppRouter.js";
 
 export default function App() {
